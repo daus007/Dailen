@@ -1,1 +1,1 @@
-{"source":{"type":"registry","id":"com.megster.cordova.bluetoothserial"}}
+{"source":{"type":"git","url":"https://github.com/don/BluetoothSerial.git","subdir":"."}}
