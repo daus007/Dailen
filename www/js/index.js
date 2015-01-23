@@ -1,4 +1,4 @@
-var macAddress = "50:3c:c4:c4:be:4d";
+var macAddress = "50:3C:C4:CD:BE:4D";
 
 var app = {
     initialize: function() {
