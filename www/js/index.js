@@ -1,4 +1,4 @@
-var macAddress = "50:3C:C4:CD:BE:4D";
+var macAddress = "A0:82:1F:9E:9E:A1";
 
 var app = {
     initialize: function() {
@@ -15,13 +15,13 @@ var app = {
         statusDiv.innerHTML="Connected to " + macAddress + ".";
     },
     onDisconnect: function() {
-        alert("Disconnected");
-        statusDiv.innerHTML="Disconnected.";
+        alert("Disconnected FROM :" + macAddress + ".");
+        statusDiv.innerHTML="Disconnected." + macAddress + ".";
     },
     onMessage: function(data) {
         counter.innerHTML = data;
     },
     subscribeFailed: function() {
-        alert("subscribe failed");
+        alert("subscribe failed TO:" + macAddress + ".");
     }
 };
