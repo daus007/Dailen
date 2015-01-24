@@ -9,14 +9,16 @@ var app = {
     },
     onDeviceReady: function() {
         bluetoothSerial.connect(macAddress, app.onConnect, app.onDisconnect);
+        bluetoothSerial.subscribe("\n", app.onMessage, app.subscribeFailed);
+        statusDiv.innerHTML="Connected to " + macAddress + ".";
     },
     onConnect: function() {
         bluetoothSerial.subscribe("\n", app.onMessage, app.subscribeFailed);
         statusDiv.innerHTML="Connected to " + macAddress + ".";
     },
     onDisconnect: function() {
-        alert("Disconnected FROM :" + macAddress + ".");
-        statusDiv.innerHTML="Disconnected." + macAddress + ".";
+        alert("Disconnected FROM pero sin div:" + macAddress + ".");
+        //statusDiv.innerHTML="Disconnected." + macAddress + ".";
     },
     onMessage: function(data) {
         counter.innerHTML = data;
