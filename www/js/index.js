@@ -47,6 +47,14 @@ var app = {
         bluetoothSerial.disconnect(app.ondisconnect);
     },
     sendData: function(event) {
+        
+        var device = macAddress;//deviceList[deviceList.selectedIndex].value;
+        app.disable(connectButton);
+        app.setStatus("Connecting...");
+        alert("Requesting connection to " + device);
+        bluetoothSerial.connect(device);
+        
+        //bluetoothSerial.subscribe("\n", app.onMessage, app.subscribeFailed);
         event.preventDefault();
 
         var text = message.value + "\n";
