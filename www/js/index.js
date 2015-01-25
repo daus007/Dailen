@@ -35,7 +35,7 @@ var app = {
         var device = macAddress;//deviceList[deviceList.selectedIndex].value;
         app.disable(connectButton);
         app.setStatus("Connecting...");
-        console.log("Requesting connection to " + device);
+        alert("Requesting connection to " + device);
         bluetoothSerial.connect(device, app.onconnect, app.ondisconnect);
     },
     disconnect: function(event) {
