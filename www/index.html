@@ -29,7 +29,7 @@
     <body>
 
         <h1>Bluetooth</h1>
-        <div id="counter"><a href="javascript:intento();">Conectar</a></div>
+        <div id="counter"><a href="javascript:intento()">Conectar</a></div>
 
 
         <script type="text/javascript" src="cordova.js"></script>
@@ -37,7 +37,7 @@
         <script type="text/javascript" src="js/bc.js"></script>
         <script type="text/javascript">
             bluetooth.initialize();
-            function intento(){ bluetooth.connectDevice(exito,errores,"A0:82:1F:9E:9E:A1","1");}
+            function intento(){alert("Intento"); bluetooth.connectDevice(exito,errores,"A0:82:1F:9E:9E:A1","1");}
             function exito(){alert("Exito");}
             function errores(){alert("Errores");}
         </script>
